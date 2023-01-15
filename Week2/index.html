@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="frame">
+      <div class="center">
+        <div class="menu-icon">
+          <div class="line-1 no-animation"></div>
+          <div class="line-2 no-animation"></div>
+          <div class="line-3 no-animation"></div>
+        </div>
+      </div>
+    </div>
+    <script>
+      let menuIcon = document.querySelector(".menu-icon");
+      menuIcon.addEventListener("click", function () {
+        this.classList.toggle("active");
+        this.querySelectorAll("div").forEach(function (elem) {
+          elem.classList.remove("no-animation");
+        });
+      });
+    </script>
+  </body>
+</html>
